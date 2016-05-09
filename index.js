@@ -21,3 +21,7 @@ window.onload = function(nombre, taille) {
             }
         }
     }
+    
+    
+    
+    
