@@ -1,13 +1,15 @@
 function damier() {
         var canvas = document.getElementById('can');
         var context = canvas.getContext('2d');
+        var timer = document.getElementById("timer").value;
         var a = [];
-        setInterval(anime, 1000);
+		setTimeout(anime, timer);
         
         function anime() {
 
 			var nombre = document.getElementById("nbCase").value;
 			var taille = document.getElementById("tailleCase").value;
+			var timer = document.getElementById("timer").value;
             context.fillStyle = "white";
             context.clearRect(0, 0, canvas.width, canvas.height);
             for (i=0; i<nombre; i++) {
@@ -22,6 +24,7 @@ function damier() {
                     context.fillRect(taille*i, taille*j, taille, taille);
                 }
             }
+            setTimeout(anime, timer);
         }
     }
     
