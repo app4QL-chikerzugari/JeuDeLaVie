@@ -1,4 +1,19 @@
 title {
   text-align: center;
   color: red;
+   background-color: pink;
+}
+
+body
+{
+  background-color: green;
+}
+
+canvas {
+  border: 10 px solid black;
+  margin: 1 px;
+  width: 40 px;
+  height: 10 px;
+  padding: 10 px;
+  background-color: blue;
 }
