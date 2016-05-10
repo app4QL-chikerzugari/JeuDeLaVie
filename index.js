@@ -1,35 +1,47 @@
-window.onload = function(nombre, taille) {
 
+function damier() {
 
         var canvas = document.getElementById('can');
         var context = canvas.getContext('2d');
+        var timer = document.getElementById("timer").value;
         var a = [];
-        var color = document.getElementById('color1');
-	
-	var color2 = document.getElementById('color2');
-	setInterval(anime, 1000);
+
+        var timer = document.getElementById("timer").value;
+            
+	 setTimeout(anime, timer);
+
         
         function anime() {
-            context.fillStyle = "green";
+
+			var nombre = document.getElementById("nbCase").value;
+			var taille = document.getElementById("tailleCase").value;
+			var timer = document.getElementById("timer").value;
+            
             context.clearRect(0, 0, canvas.width, canvas.height);
-	var color = document.getElementById('color1');
+	var color = document.getElementById('color1').value;
         
-        var color2 = document.getElementById('color2');
+        var color2 = document.getElementById('color2').value;
 
             for (i=0; i<nombre; i++) {
                 for (j=0; j<nombre; j++) {
                     if (Math.random() > 0.9) {
                         a[i*nombre+j] = 1;
+
                         context.fillStyle = color;
                     } else {
                         a[i*nombre+j] = 0;
                         context.fillStyle = color2;
+
                     }
                     context.fillRect(taille*i, taille*j, taille, taille);
                 }
             }
+            setTimeout(anime, timer);
         }
+        
     }
+    
+ 
     
     
     
